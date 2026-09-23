@@ -1,0 +1,258 @@
+<!--
+Peter Paul S. Manatad Jr.
+Senate President, University Student Government
+23/09/2026
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Practical Application Activity</title>
+
+</head>
+
+
+<body>
+
+    <!-- The header introduces the webpage and provides a brief overview of the activity. -->
+    <header id="main-header">
+
+        <h1 id="main-heading">
+            HTML Practical Application Activity
+        </h1>
+
+        <p>
+            This webpage demonstrates the basic use of HTML through
+            images, hyperlinks, multimedia, useful HTML tags, and the HTML DOM.
+        </p>
+
+        <p>
+            These elements are commonly used to organize information,
+            provide navigation, present different types of content,
+            and make webpages easier to understand and interact with.
+        </p>
+
+    </header>
+
+
+    <section id="images-section">
+
+        <h2>Images</h2>
+
+        <p>
+            Images are commonly used to provide visual information
+            and make webpage content easier to understand.
+            The examples below show how HTML can display images
+            with descriptive alternative text.
+        </p>
+
+        <figure>
+
+            <img src="images/csuUSG.jpg"
+                 alt="Caraga State University campus and University Student Government"
+                 width="500">
+
+            <figcaption>
+                Caraga State University campus and University Student Government.
+            </figcaption>
+
+        </figure>
+
+        <img src="images/Nature.webp"
+             alt="A natural landscape with trees and mountains"
+             width="400">
+
+        <img src="images/AgusanRiver.jpg"
+             alt="A river flowing through the landscape"
+             width="400">
+
+        <p>
+            The use of descriptive alternative text also helps users
+            understand the purpose or content of an image when it
+            cannot be viewed.
+        </p>
+
+    </section>
+
+    <section id="hyperlinks-section">
+
+        <h2>Hyperlinks</h2>
+
+        <p>
+            Hyperlinks are used to connect webpages and other resources.
+            They allow users to navigate to another page, visit an external
+            website, send an email, or move to a specific section of the same page.
+        </p>
+
+        <p>
+            <a href="activity.html">
+                Internal Link: Open this page again
+            </a>
+        </p>
+
+        <p>
+            <a href="https://www.w3schools.com/html/" target="_blank">
+                External Link: Learn more about HTML
+            </a>
+        </p>
+
+
+        <p>
+            <a href="mailto:peterpaulnolasmanatad@email.com">
+                Email Link: Contact me
+            </a>
+        </p>
+
+        <p>
+            <a href="#dom-section">
+                Same-Page Anchor: Go to the HTML DOM section
+            </a>
+        </p>
+
+    </section>
+
+    <section id="multimedia-section">
+
+        <h2>Multimedia</h2>
+
+        <p>
+            HTML5 provides built-in elements for displaying multimedia.
+            Audio and video can be added directly to a webpage without
+            requiring additional plugins.
+        </p>
+
+        <h3>Audio</h3>
+
+        <p>
+            The audio element allows sound files to be played directly
+            through the browser using built-in playback controls.
+        </p>
+
+        <audio controls>
+
+            <source src="media/audio_pete.wav" type="audio/wav">
+
+            Your browser does not support the audio element.
+
+        </audio>
+
+
+        <h3>Video</h3>
+
+        <p>
+            The video element allows video files to be displayed and
+            controlled directly within the webpage.
+        </p>
+
+        <video controls width="500">
+
+            <source src="media/pete_vid.mp4" type="video/mp4">
+
+            Your browser does not support the video element.
+
+        </video>
+
+    </section>
+
+    <section id="useful-tags-section">
+
+        <h2>Useful HTML Tags</h2>
+
+        <p>
+            HTML provides different tags for giving content additional
+            meaning, emphasis, or functionality. The examples below
+            demonstrate several commonly used HTML tags.
+        </p>
+
+        <!-- The strong tag indicates that the text has strong importance. -->
+        <p>
+            <strong>Important:</strong>
+            HTML provides the basic structure of a webpage.
+        </p>
+
+        <!-- The em tag emphasizes a word or phrase within a sentence. -->
+        <p>
+            Learning HTML becomes <em>easier through practice</em>
+            and consistent application of its basic elements.
+        </p>
+
+        <!-- The mark tag highlights a particular part of the content. -->
+        <p>
+            The <mark>HTML DOM</mark> represents the structure
+            of a webpage as a tree of elements.
+        </p>
+
+        <!-- The blockquote tag is used to separate a quotation from the surrounding content para mas chuy -->
+        <blockquote>
+            Well-structured information makes content easier
+            for people to read and understand.
+        </blockquote>
+
+        <!-- The details tag creates expandable content without requiring JavaScript. -->
+        <details>
+
+            <summary>Click to learn more about HTML</summary>
+
+            <p>
+                HTML stands for HyperText Markup Language.
+                It provides the structure and meaning of content
+                displayed on a webpage.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- The HTML DOM section demonstrates the parent-child relationship between HTML elements. -->
+    <section id="dom-section">
+
+        <h2>HTML DOM</h2>
+
+        <p>
+            The HTML Document Object Model, or DOM, represents an HTML
+            document as a hierarchical tree of elements. Each element
+            can have a parent, children, or both.
+        </p>
+
+        <div id="dom-container">
+
+            <article id="dom-article">
+
+                <h3>Understanding the DOM Tree</h3>
+
+                <p>
+                    In this example, the section acts as a parent of the div.
+                    The div then acts as a parent of the article element,
+                    which contains the heading and paragraphs.
+                </p>
+
+                <p>
+                    These relationships allow the browser to organize
+                    the webpage's content and represent it as a structured tree.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!--
+    The body element serves as the parent of the main sections of the webpage.
+    The dom-section element is the parent of the dom-container div.
+    The dom-container div is the parent of the dom-article element, which contains
+    the heading and paragraphs. These parent-child relationships demonstrate how
+    HTML elements are organized within the hierarchical structure of the DOM.
+    -->
+
+
+</body>
+
+</html>
