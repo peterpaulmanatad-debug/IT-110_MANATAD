@@ -1,0 +1,298 @@
+
+/* ============================================
+   PART A: CSS FUNDAMENTALS AND RESET
+   Blue Profile Card Theme
+   ============================================ */
+
+/* Universal selector and box-sizing reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Type selector: general page styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #243247;
+    background-color: #edf3fa;
+    line-height: 1.7;
+}
+
+/* Grouping selector */
+h1, h2 {
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: white;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #174a86;
+    margin-bottom: 16px;
+}
+
+/* Demonstrating the CSS cascade:
+   Both selectors have equal specificity.
+   The second rule wins because it comes later, its understood to be the last and final. */
+header h1 {
+    color: #b9d9ff;
+}
+
+header h1 {
+    color: white;
+}
+
+
+/* ============================================
+   PART B: SELECTORS AND COMPONENTS
+   ============================================ */
+
+/* Header: blue gradient and centered content */
+header {
+    background: linear-gradient(135deg, #102f5c, #1769aa);
+    color: white;
+    text-align: center;
+    padding: 34px 16px 28px;
+    margin-bottom: 34px;
+    border-bottom: 5px solid #e5b84b;
+    box-shadow: 0 5px 16px rgba(16, 47, 92, 0.18);
+}
+
+header p {
+    margin-top: 6px;
+    color: #d9eaff;
+    font-size: 0.95rem;
+}
+
+/* Navigation */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    display: inline-block;
+    color: #174a86;
+    background-color: white;
+    text-decoration: none;
+    padding: 9px 19px;
+    margin: 4px;
+    border: 1px solid #c6dcf4;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Pseudo-class: hover effect */
+nav a:hover {
+    color: white;
+    background-color: #e0ad35;
+    border-color: #e0ad35;
+}
+
+/* Class selector: main profile cards */
+.card {
+    width: 500px;
+    max-width: calc(100% - 32px);
+    padding: 26px;
+    border: 2px solid #c9d9eb;
+    border-radius: 14px;
+    margin: 0 auto 26px;
+    background-color: white;
+    box-shadow: 0 6px 18px rgba(32, 72, 120, 0.10);
+}
+
+/* Box-model calculation:
+   With border-box, one standard card is 500px wide.
+   Padding and borders are included in the total width.
+*/
+
+/* Descendant selector: paragraphs inside cards */
+.card p {
+    margin-bottom: 12px;
+}
+
+/* ID selector: About card stands out */
+#about {
+    position: relative;
+    border: 3px solid #397fbd;
+    background-color: #f8fbff;
+    background-image: linear-gradient(
+        145deg,
+        #ffffff,
+        #edf6ff
+    );
+}
+
+/* Class selector: introduction styling */
+.intro {
+    color: #334c68;
+}
+
+/* Pseudo-element: decorative profile badge */
+#about::after {
+    content: "MY PROFILE";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: white;
+    background-color: #1d64a6;
+    padding: 4px 10px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    border-radius: 5px;
+}
+
+/* Pseudo-element: decorative heading accent */
+h2::before {
+    content: "◆ ";
+    color: #e0ad35;
+    font-size: 0.9em;
+}
+
+/* Pseudo-element: style the first letter of the intro */
+.intro p:first-of-type::first-letter {
+    color: #1769aa;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* ============================================
+   PART C: BOX MODEL AND FLEXBOX
+   ============================================ */
+
+/* Flex container for skill tags */
+.skills-list {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 16px;
+}
+
+/* Child selector: direct list items */
+.skills-list > li {
+    color: #174a86;
+    background-color: #e4f0ff;
+    padding: 9px 17px;
+    border: 1px solid #b6d2f0;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(32, 72, 120, 0.07);
+}
+
+/* A little hover feedback on skill tags */
+.skills-list > li:hover {
+    background-color: #d0e5ff;
+    border-color: #397fbd;
+}
+
+/* ============================================
+   PART D: DISPLAY AND VISIBILITY
+   ============================================ */
+
+/* display: none removes the element and its space. */
+.hide-none {
+    display: none;
+}
+
+/* visibility: hidden hides the element but keeps its space. */
+.hide-visibility {
+    visibility: hidden;
+}
+
+/* The hobbies box has a fixed height and scrolls. */
+.scroll-box {
+    height: 120px;
+    overflow: auto;
+    padding: 14px;
+    border: 1px solid #b6d2f0;
+    border-left: 4px solid #397fbd;
+    background-color: #f3f8ff;
+    border-radius: 7px;
+    color: #334c68;
+}
+
+/* Style the scrollbar where supported */
+.scroll-box {
+    scrollbar-color: #82add8 #e5eef8;
+    scrollbar-width: thin;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    text-align: center;
+    background-color: #102f5c;
+    color: white;
+    padding: 20px 16px;
+    margin-top: 34px;
+    border-top: 4px solid #e5b84b;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 540px) {
+    .card {
+        width: calc(100% - 24px);
+        max-width: none;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
+
+    #about::after {
+        top: 8px;
+        right: 8px;
+        font-size: 0.58rem;
+    }
+}
+
+/*
+   REFLECTION QUESTIONS
+   */
+
+/*
+1. The second header h1 rule wins because both rules have the same specificity, meaning they have equal selector strength.
+Since neither rule has an advantage over the other, the browser applies the declaration that appears later in the stylesheet.
+This demonstrates the CSS cascade, where specificity is considered first,
+and source order determines which rule takes precedence when specificity is equal.
+
+2. If box-sizing were set to content-box instead of border-box, the card's total rendered width would be 552px.
+The computation is 500px content width + 48px horizontal padding (24px on each side) + 4px borders (2px on each side) = 552px.
+With content-box, the declared width applies only to the content, so padding and borders increase the total size. In contrast,
+border-box includes the content, padding, and borders within the specified 500px width, making the layout easier to 
+and preventing the card from becoming wider than intended.
+
+3. I would use visibility: hidden when I want to make an element invisible without changing the layout or moving nearby elements.
+For example, if a label or notification needs to be temporarily hidden, its space remains reserved,
+allowing the surrounding content to stay in the same position. This differs from display: none, which removes
+the element from the layout entirely and allows other elements to occupy the space it would have used. Therefore,
+visibility: hidden is useful when maintaining consistent spacing is important,
+while display: none is more appropriate when an element should no longer occupy any space on the page.
+*/
